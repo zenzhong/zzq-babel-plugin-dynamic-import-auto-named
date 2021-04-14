@@ -1,7 +1,7 @@
 <!--
  * @Author: 小指
  * @Date: 2021-04-14 16:02:32
- * @LastEditTime: 2021-04-14 16:49:52
+ * @LastEditTime: 2021-04-14 16:57:47
  * @LastEditors: 小指
  * @Description: 说明文档
 -->
@@ -26,7 +26,8 @@ npm i -D zzq-babel-plugin-dynamic-import-auto-named
 ...
 "plugins": [
   [
-    "zzq-babel-plugin-dynamic-import-auto-named",
+    // 请确保使用require引入，否则会自动添加前缀
+    require("zzq-babel-plugin-dynamic-import-auto-named"),
     {
       "connector": "_" // 文件连接符，默认使用_
     }
