@@ -1,13 +1,13 @@
 <!--
  * @Author: 小指
  * @Date: 2021-04-14 16:02:32
- * @LastEditTime: 2021-04-14 16:22:50
+ * @LastEditTime: 2021-04-14 16:49:52
  * @LastEditors: 小指
  * @Description: 说明文档
 -->
 # zzq-babel-plugin-dynamic-import-auto-named
 
-自动为dynamic import添加webpackChunkName
+自动为dynamic import添加webpackChunkName，支持babel6+和babel7+。
 
 
 ## 快速使用
@@ -35,7 +35,7 @@ npm i -D zzq-babel-plugin-dynamic-import-auto-named
 ...
 ```
 
-### 效果
+## 效果
 
 未添加`webpackChunkName`则会根据路径添加，去除相对路径`.`和`..`，替换`connector`：
 ```
@@ -47,4 +47,10 @@ npm i -D zzq-babel-plugin-dynamic-import-auto-named
 已经添加`webpackChunkName`则忽略，保留原来的配置：
 ```
 () => import(/* webpackChunkName: "about" */ '@/views/about.vue'), // () => import(/* webpackChunkName: "about" */ '@/views/about.vue'),
+```
+
+## 测试
+
+```
+npm run test
 ```
